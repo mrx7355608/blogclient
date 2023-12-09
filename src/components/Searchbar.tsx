@@ -18,7 +18,7 @@ export default function Searchbar() {
             <input
                 placeholder="Search"
                 type="text"
-                className="w-full border-2 text-white py-3 rounded-md px-4 border-gray-500"
+                className="w-full border-2 text-white py-3 rounded-md px-4 border-gray-500 font-ibm"
                 onChange={handleChange}
             />
             <button
