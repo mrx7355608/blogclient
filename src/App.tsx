@@ -2,7 +2,8 @@ import React from "react";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 import Home from "./Home";
-const Blog = React.lazy(() => import("./Blog")); // Lazy loading
+const Blog = React.lazy(() => import("./Blog"));
+const Searchpage = React.lazy(() => import("./Searchpage"));
 
 const router = createBrowserRouter([
     {
@@ -12,6 +13,10 @@ const router = createBrowserRouter([
     {
         path: "/blog/:slug",
         element: <Blog />,
+    },
+    {
+        path: "/search",
+        element: <Searchpage />,
     },
 ]);
 
