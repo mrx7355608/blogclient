@@ -1,22 +1,22 @@
 import React from "react";
-import Navbar from "./components/Navbar";
-import BlogCard from "./components/BlogCard";
-import Searchbar from "./components/Searchbar";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+
+import Home from "./Home";
+const Blog = React.lazy(() => import("./Blog")); // Lazy loading
+
+const router = createBrowserRouter([
+    {
+        path: "/",
+        element: <Home />,
+    },
+    {
+        path: "/blog/:slug",
+        element: <Blog />,
+    },
+]);
 
 function App() {
-    return (
-        <React.Fragment>
-            <Navbar />
-            <div className="flex flex-col gap-8 p-4 mx-auto w-full lg:w-7/12">
-                <Searchbar />
-                <BlogCard />
-                <BlogCard />
-                <BlogCard />
-                <BlogCard />
-                <BlogCard />
-            </div>
-        </React.Fragment>
-    );
+    return <RouterProvider router={router} />;
 }
 
 export default App;
