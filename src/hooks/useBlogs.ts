@@ -9,7 +9,7 @@ export interface IBlog {
     published_on: string;
 }
 
-type IApiResponse = {
+export type IApiResponse = {
     status: string;
     code: number;
     data: IBlog[];

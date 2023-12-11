@@ -8,9 +8,9 @@ export default function Blog() {
     return (
         <React.Fragment>
             <Navbar />
-            <div className="w-full p-4 lg:w-7/12 mx-auto">
+            <div className="w-full p-4 lg:w-7/12 mx-auto mt-10">
                 <h3 className="text-4xl font-ibm font-bold mb-2 text-white">
-                    React Fragment, what even it is?
+                    Linux Ricing, Customizing terminal
                 </h3>
                 <p className="mb-3 text-gray-400 font-ibm text-lg">
                     Tues 02 December 2023
