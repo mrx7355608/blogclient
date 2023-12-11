@@ -1,4 +1,8 @@
-export default function Tag() {
+type ITagComponentProps = {
+    tag: string;
+};
+
+export default function Tag({ tag }: ITagComponentProps) {
     return (
         <div
             className="px-3 py-1 bg-transparent border-gray-500 text-gray-300 rounded-md font-ibm"
@@ -6,7 +10,7 @@ export default function Tag() {
                 borderWidth: "1px",
             }}
         >
-            Linux
+            {tag}
         </div>
     );
 }
